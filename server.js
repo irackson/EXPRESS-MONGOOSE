@@ -70,6 +70,13 @@ app.get('/', (req, res) => {
     res.send('<h1>Hello World</h1>');
 });
 
+//! Mount Catchall
+// wildcard route catchall activated for any/all routes that aren't found and/or error out
+// must go on the bottom
+app.get('*', (req, res) => {
+    res.redirect('/');
+});
+
 //!          __  ___  ___       ___  __
 //! |    | /__`  |  |__  |\ | |__  |__)
 //! |___ | .__/  |  |___ | \| |___ |  \

@@ -27,6 +27,11 @@ mongoose.connect(mongodbURL, mongoconfig, () => {
     // console.log('the connection with mongod is established'.rainbow.bold);
 });
 
+//? alternate initial connect log command
+/* mongoose.connection.once("open", () => {
+    console.log("connected to mongo");
+  }); */
+
 //* Connection Error/Success
 // Define callback functions for various events
 db.on('error', (err) => {
